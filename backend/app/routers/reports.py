@@ -32,8 +32,7 @@ async def generate_report(req: ReportRequest, current_user: User = Depends(get_c
         "active_machines": machines_cnt,
         "materials_low_stock_count": low_stock_materials,
         "customer_orders_received": total_customers_orders,
-        "target_achievement_pct": "94.5%",
-        "created_by": "BMS (PVCPilot AI Platform)"
+        "target_achievement_pct": "94.5%"
     }
 
     if req.format.lower() == "pdf":

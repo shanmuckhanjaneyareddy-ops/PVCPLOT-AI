@@ -64,7 +64,6 @@ async def health_check():
     return {
         "status": "healthy",
         "application": "PVCPilot AI",
-        "created_by": "BMS",
         "version": "1.0.0"
     }
 

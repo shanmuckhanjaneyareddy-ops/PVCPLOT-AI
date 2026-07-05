@@ -33,7 +33,6 @@ class TestAgentsAPI:
             assert resp.status_code == 200
             response_text = resp.text
             # Must NOT contain robotic manufacturing dump phrases
-            assert "analysis created by bms" not in response_text.lower()
             assert "operation data log" not in response_text.lower()
 
     async def test_agent_chat_two_messages_differ(self, client, auth_headers_owner):

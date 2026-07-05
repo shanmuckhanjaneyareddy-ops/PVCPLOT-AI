@@ -22,8 +22,6 @@
 
 <br/>
 
-**Created by BMS**
-
 [🚀 Quick Start](#-quick-start) · [✨ Features](#-key-features) · [🏗️ Architecture](#-system-architecture) · [📖 API Reference](#-api-reference) · [🧪 Tests](#-running-the-test-suite)
 
 </div>
@@ -547,7 +545,5 @@ pytest -v
 <div align="center">
 
 **PVCPilot AI** — *Intelligent Factory Operations, Powered by AI.* 🏭✨
-
-<sub>Built with ❤️ by BMS</sub>
 
 </div>

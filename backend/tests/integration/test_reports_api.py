@@ -22,8 +22,8 @@ class TestReportsAPI:
         assert resp.headers["content-type"] == "application/pdf"
         assert len(resp.content) > 1000  # Non-empty PDF
 
-    async def test_pdf_report_contains_footer_watermark(self, client, auth_headers_owner):
-        """PDF report must contain 'CREATED BY BMS' and '2026' in the footer"""
+    async def test_pdf_report_contains_footer_branding(self, client, auth_headers_owner):
+        """PDF report must contain 'PVCPILOT' and '2026' in the footer"""
         resp = await client.post("/api/reports/generate", headers=auth_headers_owner, json={
             "report_type": "daily_production",
             "format": "pdf",
@@ -39,7 +39,7 @@ class TestReportsAPI:
 
         # Allow case insensitive checks
         text_upper = full_text.upper()
-        assert "CREATED BY BMS" in text_upper
+        assert "PVCPILOT" in text_upper
         assert "2026" in text_upper
         assert "PVCPILOT" in text_upper
 

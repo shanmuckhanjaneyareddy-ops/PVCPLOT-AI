@@ -24,7 +24,7 @@ def generate_excel_report(report_type: str, data: dict) -> io.BytesIO:
     ws["A1"].font = title_font
     ws["A1"].alignment = Alignment(horizontal="center")
     
-    ws["A2"] = "Created by BMS"
+    ws["A2"] = "Manufacturing Intelligence Platform"
     ws["A2"].font = Font(name="Arial", size=9, italic=True)
     
     ws["A4"] = "Report Type"
@@ -63,19 +63,19 @@ def generate_excel_report(report_type: str, data: dict) -> io.BytesIO:
     # Append the custom branding footer
     row += 2
     ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=2)
-    ws["A" + str(row)] = "CREATED BY BMS · PVCPilot AI © 2026"
+    ws["A" + str(row)] = "PVCPilot AI — Manufacturing Intelligence Platform"
     ws["A" + str(row)].font = Font(name="Arial", size=10, bold=True, color="0EA5E9")
     ws["A" + str(row)].alignment = Alignment(horizontal="center")
     
     row += 1
     ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=2)
-    ws["A" + str(row)] = "Manufacturing Intelligence Platform · Powered by Google Gemini 2.5 Pro"
+    ws["A" + str(row)] = "Intelligent Factory Operations Platform"
     ws["A" + str(row)].font = Font(name="Arial", size=8, italic=True)
     ws["A" + str(row)].alignment = Alignment(horizontal="center")
     
     row += 1
     ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=2)
-    ws["A" + str(row)] = "📷 Instagram: @b.mohan2678 | 💼 LinkedIn: mohanshankar-botcha-06668a379 | 🐦 Twitter/X: @BMS_PVCPilot"
+    ws["A" + str(row)] = "PVCPilot AI — Operational Report"
     ws["A" + str(row)].font = Font(name="Arial", size=8, color="71717A")
     ws["A" + str(row)].alignment = Alignment(horizontal="center")
 
